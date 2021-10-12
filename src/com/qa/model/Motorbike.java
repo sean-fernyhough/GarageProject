@@ -33,4 +33,48 @@ public class Motorbike extends Vehicle {
 		}
 	}
 
+
+	public int getWheels() {
+		return wheels;
+	}
+
+
+	public void setWheels(int wheels) {
+		this.wheels = wheels;
+	}
+
+
+	public boolean isHasPassengerSeats() {
+		return hasPassengerSeats;
+	}
+
+
+	public void setHasPassengerSeats(boolean hasPassengerSeats) {
+		this.hasPassengerSeats = hasPassengerSeats;
+	}
+
+
+	public boolean isHasMudguards() {
+		return hasMudguards;
+	}
+
+
+	public void setHasMudguards(boolean hasMudguards) {
+		this.hasMudguards = hasMudguards;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Motorbike [wheels=" + wheels + ", hasPassengerSeats=" + hasPassengerSeats + ", hasMudguards="
+				+ hasMudguards + "]";
+	}
+
+	
+	
 }
+
+
+
+
+

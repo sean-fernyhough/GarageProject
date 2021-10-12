@@ -30,4 +30,36 @@ public class Car extends Vehicle {
 		}
 	}
 
+	public int getNumDoors() {
+		return numDoors;
+	}
+
+	public void setNumDoors(int numDoors) {
+		this.numDoors = numDoors;
+	}
+
+	public int getBootSpace() {
+		return bootSpace;
+	}
+
+	public void setBootSpace(int bootSpace) {
+		this.bootSpace = bootSpace;
+	}
+
+	public boolean isHasSeatWarmers() {
+		return hasSeatWarmers;
+	}
+
+	public void setHasSeatWarmers(boolean hasSeatWarmers) {
+		this.hasSeatWarmers = hasSeatWarmers;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [numDoors=" + numDoors + ", bootSpace=" + bootSpace + ", hasSeatWarmers=" + hasSeatWarmers + "]";
+	}
+	
+	
+	
+
 }

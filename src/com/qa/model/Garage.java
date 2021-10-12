@@ -14,6 +14,10 @@ public class Garage {
 		garage.add(vehicle);
 	}
 	
+	public void addVehicle(Vehicle vehicle, int index) {
+		garage.add(index, vehicle);;
+	}
+	
 	public float fixDiff(String id) {
 		float value = 0;
 		for(int i = 0; i < garage.size(); i++ ) {
@@ -21,14 +25,14 @@ public class Garage {
 				Vehicle vehicle = garage.get(i);
 				String type = vehicle.getType();
 					if(type == "car") {
-						float subValue = vehicle.calcValue() * 3 ;
+						value = vehicle.calcValue() * 3 ;
 					}else if (type == "motorbike") {
-						float subValue = vehicle.calcValue() * 0.8f;
+						value = vehicle.calcValue() * 0.8f;
 					}else if (type == "speed boat") {
-						float subValue = vehicle.calcValue() * 10;
+						value = vehicle.calcValue() * 10;
 					}
-				float subValue = garage.get(i).calcValue();
-				return subValue;
+				value = garage.get(i).calcValue();
+				return value;
 			}
 			}
 		return value;
@@ -39,8 +43,8 @@ public class Garage {
 		for(int i = 0; i < garage.size(); i++ ) {
 			if (garage.get(i).getId() == id) {
 				Vehicle vehicle = garage.get(i);
-				float subValue = garage.get(i).calcValue();
-				return subValue;
+				value = vehicle.calcValue();
+				return value;
 			}
 			}
 		return value;
@@ -50,12 +54,9 @@ public class Garage {
 		float value = 0;
 		for(int i = 0; i < garage.size(); i++ ) {
 				value += garage.get(i).calcValue();
-				return value;
 			}
 		return value;
 			}
-
-
 	
 	
 
@@ -94,6 +95,14 @@ public class Garage {
 		garage.clear();
 	}
 	
+	public Vehicle get(int index) {
+		return garage.get(index);
+		
+	}
+	
+	public int getSize() {
+		return garage.size();
+	}
 		
 	}
 	

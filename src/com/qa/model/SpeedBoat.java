@@ -40,6 +40,11 @@ public class SpeedBoat extends Vehicle {
 	public void setRadioModel(String radioModel) {
 		this.radioModel = radioModel;
 	}
+
+	@Override
+	public String toString() {
+		return "SpeedBoat [numEngines=" + numEngines + ", radioModel=" + radioModel + "]";
+	}
 	
 	
 	
