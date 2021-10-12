@@ -34,7 +34,6 @@ public class Garage {
 						
 				}
 			}
-		
 		System.out.println("value of cars: " + carValue);
 		System.out.println("value of bikes: " + bikeValue);
 		System.out.println("value of boats: " + boatValue);
