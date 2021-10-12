@@ -66,7 +66,9 @@ public class Motorbike extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Motorbike [wheels=" + wheels + ", hasPassengerSeats=" + hasPassengerSeats + ", hasMudguards="
+		return "Vehicle [id=" + getId() + ", type=" + getType() + ", colour=" + getColour() + ", engineSize=" + getEngineSize()
+		+ ", isPreowned=" + isPreowned() + ", age=" + getAge() + ", topSpeed=" + getTopSpeed() + ", acceleration="
+		+ getAcceleration() + ", baseValue=" + getBaseValue() +  "wheels=" + wheels + ", hasPassengerSeats=" + hasPassengerSeats + ", hasMudguards="
 				+ hasMudguards + "]";
 	}
 
