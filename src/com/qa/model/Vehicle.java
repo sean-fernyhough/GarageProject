@@ -109,6 +109,14 @@ public class Vehicle {
 		this.baseValue = baseValue;
 	}
 
+
+	@Override
+	public String toString() {
+		return "Vehicle [id=" + id + ", type=" + type + ", colour=" + colour + ", engineSize=" + engineSize
+				+ ", isPreowned=" + isPreowned + ", age=" + age + ", topSpeed=" + topSpeed + ", acceleration="
+				+ acceleration + ", baseValue=" + baseValue + "]";
+	}
+
 	}
 	
 	

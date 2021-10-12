@@ -43,7 +43,9 @@ public class SpeedBoat extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "SpeedBoat [numEngines=" + numEngines + ", radioModel=" + radioModel + "]";
+		return "Vehicle [id=" + getId() + ", type=" + getType() + ", colour=" + getColour() + ", engineSize=" + getEngineSize()
+		+ ", isPreowned=" + isPreowned() + ", age=" + getAge() + ", topSpeed=" + getTopSpeed() + ", acceleration="
+		+ getAcceleration() + ", baseValue=" + getBaseValue() + "numEngines=" + numEngines + ", radioModel=" + radioModel + "]";
 	}
 	
 	

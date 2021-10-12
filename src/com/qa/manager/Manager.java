@@ -6,9 +6,6 @@ public class Manager {
 
 	private Garage curGarage;
 	
-	public Manager() {
-		
-	}
 	
 	public Garage createGarage() {
 		Garage newGarage = new Garage();
@@ -66,6 +63,27 @@ public class Manager {
 		curGarage.addVehicle(vehicle, index);
 	}
 	
+
+	public void fixGarage(int index) {
+		curGarage.fix(index);
 	}
+	
+	public void fixGarage(String id) {
+		curGarage.fix(id);
+	}
+	
+	public void fixGarageAll() {
+		curGarage.fixAll();
+	}
+	
+	public void calcTypeGarage() {
+		curGarage.fixType();
+	}
+	
+	public void removeTypeGarage(String type) {
+		curGarage.removeType(type);
+	}
+	
+}
 
 

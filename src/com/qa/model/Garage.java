@@ -18,25 +18,28 @@ public class Garage {
 		garage.add(index, vehicle);;
 	}
 	
-	public float fixDiff(String id) {
-		float value = 0;
+	public void fixType() {
+		float carValue = 0;
+		float bikeValue = 0;
+		float boatValue = 0;
 		for(int i = 0; i < garage.size(); i++ ) {
-			if (garage.get(i).getId() == id) {
+				String type = garage.get(i).getClass().getSimpleName();
 				Vehicle vehicle = garage.get(i);
-				String type = vehicle.getType();
-					if(type == "car") {
-						value = vehicle.calcValue() * 3 ;
-					}else if (type == "motorbike") {
-						value = vehicle.calcValue() * 0.8f;
-					}else if (type == "speed boat") {
-						value = vehicle.calcValue() * 10;
-					}
-				value = garage.get(i).calcValue();
-				return value;
+				if(type.equals("Car")) {
+					carValue += vehicle.calcValue() * 1.2;
+				}else if (type.equals("Motorbike")) {
+					bikeValue += vehicle.calcValue() * 0.8;
+				}else if (type.equals("SpeedBoat")) {
+					boatValue += vehicle.calcValue() * 3;
+						
+				}
 			}
-			}
-		return value;
+		
+		System.out.println("value of cars: " + carValue);
+		System.out.println("value of bikes: " + bikeValue);
+		System.out.println("value of boats: " + boatValue);
 		}
+	
 	
 	public float fix(String id) {
 		float value = 0;
@@ -50,12 +53,22 @@ public class Garage {
 		return value;
 		}
 	
-	public float fixAll(String id) {
+	public void fix(int index) {
 		float value = 0;
-		for(int i = 0; i < garage.size(); i++ ) {
-				value += garage.get(i).calcValue();
+				Vehicle vehicle = garage.get(index);
+				value = vehicle.calcValue();
+				System.out.println("Repair cost: " + value);
 			}
-		return value;
+	
+	public void fixAll() {
+		float value = 0;
+		float subValue = 0;
+		for(int i = 0; i < garage.size(); i++ ) {
+				subValue = garage.get(i).calcValue();
+				value += garage.get(i).calcValue();
+				System.out.println("Item " + (i + 1) + ":" + subValue);
+			}
+		System.out.println("Sum of all repair work: " + value);
 			}
 	
 	
@@ -67,22 +80,37 @@ public class Garage {
 			}
 			}
 	}
+//	
+//	public void removeTypeAll(String type) {
+//		for(int i = 0; i < garage.size(); i++ ) {
+//			if (garage.get(i).getType() == type) {
+//				garage.remove(i);
+//			}
+//			}
+//	}
 	
-	public void removeTypeAll(String type) {
-		for(int i = 0; i < garage.size(); i++ ) {
-			if (garage.get(i).getType() == type) {
-				garage.remove(i);
-			}
-			}
-	}
+//	public void removeTypeSingle(String type) {
+//		for(int i = 0; i < garage.size(); i++ ) {
+//			if (garage.get(i).getType() == type) {
+//				garage.remove(i);
+//				break;
+//			}
+//			}
+//	}
 	
-	public void removeTypeSingle(String type) {
+	public void removeType(String type) {
 		for(int i = 0; i < garage.size(); i++ ) {
-			if (garage.get(i).getType() == type) {
-				garage.remove(i);
-				break;
+				i = 0;
+				String checkType = garage.get(i).getClass().getSimpleName();
+				Vehicle vehicle = garage.get(i);
+				if(checkType.equals("Car") && type.equals("Car")) {
+					garage.remove(i);
+				}else if (checkType.equals("Motorbike") && type.equals("Motorbike")) {
+					garage.remove(i);
+				}else if (checkType.equals("SpeedBoat") && type.equals("SpeedBoat")) {
+					garage.remove(i);
 			}
-			}
+		}
 	}
 	
 	
@@ -99,6 +127,7 @@ public class Garage {
 		return garage.get(index);
 		
 	}
+	
 	
 	public int getSize() {
 		return garage.size();

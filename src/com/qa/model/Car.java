@@ -56,7 +56,11 @@ public class Car extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Car [numDoors=" + numDoors + ", bootSpace=" + bootSpace + ", hasSeatWarmers=" + hasSeatWarmers + "]";
+		
+		return "Vehicle [id=" + getId() + ", type=" + getType() + ", colour=" + getColour() + ", engineSize=" + getEngineSize()
+				+ ", isPreowned=" + isPreowned() + ", age=" + getAge() + ", topSpeed=" + getTopSpeed() + ", acceleration="
+				+ getAcceleration() + ", baseValue=" + getBaseValue() + "numDoors=" + numDoors + ", bootSpace=" + bootSpace + ", hasSeatWarmers=" + hasSeatWarmers + "]";
+	
 	}
 	
 	
