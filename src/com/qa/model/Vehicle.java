@@ -25,6 +25,7 @@ public class Vehicle {
 		this.baseValue = baseValue;
 	}
 	
+<<<<<<< HEAD
 	public float calcValue() {
 		float value = baseValue + (engineSize * 2000) + (topSpeed * 10) + (acceleration * 30);
 		value -= (age * 80);
@@ -112,3 +113,7 @@ public class Vehicle {
 	
 	
 	
+=======
+	
+}
+>>>>>>> dev
