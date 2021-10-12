@@ -80,23 +80,6 @@ public class Garage {
 			}
 			}
 	}
-//	
-//	public void removeTypeAll(String type) {
-//		for(int i = 0; i < garage.size(); i++ ) {
-//			if (garage.get(i).getType() == type) {
-//				garage.remove(i);
-//			}
-//			}
-//	}
-	
-//	public void removeTypeSingle(String type) {
-//		for(int i = 0; i < garage.size(); i++ ) {
-//			if (garage.get(i).getType() == type) {
-//				garage.remove(i);
-//				break;
-//			}
-//			}
-//	}
 	
 	public void removeType(String type) {
 		for(int i = 0; i < garage.size(); i++ ) {
