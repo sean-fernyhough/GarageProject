@@ -9,6 +9,11 @@ public class Runner {
 		Manager manager = new Manager();
 	
 		manager.createGarage();
+		
+		manager.input();
+		
+		System.out.println("");
+		
 		manager.addToGarage(manager.createCar("id-1", "car", "red", 1.2f, false, 8, 90, 2.5f, 500, 5, 20, false));
 		manager.addToGarage(manager.createCar("id-2", "car", "blue", 1.6f, false, 8, 90, 2.5f, 600, 5, 20, true));
 		manager.addToGarage(manager.createMotorbike("id-3", "motorbike", "yellow", 0.6f, true, 8, 90, 2.5f, 800, 2, true, false));

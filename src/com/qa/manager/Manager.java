@@ -1,5 +1,7 @@
 package com.qa.manager;
 
+import java.util.Scanner;
+
 import com.qa.model.*;
 
 public class Manager {
@@ -82,6 +84,80 @@ public class Manager {
 	
 	public void removeTypeGarage(String type) {
 		curGarage.removeType(type);
+	}
+	
+	public void input() {
+		Scanner newInput = new Scanner(System.in);
+		System.out.println("Which vehicle would you like to create?: car/bike/boat");
+		String choice = newInput.nextLine();
+		if (choice.equals("car")) {
+			Scanner dInput = new Scanner(System.in);
+			System.out.println("Please enter the ID: ");
+			String id = dInput.nextLine();
+//			dInput.close();
+			Scanner cInput = new Scanner(System.in);
+			System.out.println("Please enter the colour: ");
+			String colour = cInput.nextLine();
+//			cInput.close();
+			Scanner esInput = new Scanner(System.in);
+			System.out.println("Please enter the size of the engine: ");
+			float engineSize = (float) esInput.nextFloat();
+//			esInput.close();
+			Scanner pInput = new Scanner(System.in);
+			System.out.println("Is the car Preowned? y|n: ");
+			String preowned = pInput.nextLine();
+//			pInput.close();
+			boolean isPreowned = false;
+			if (preowned.equals("y")){
+				isPreowned = true;
+			}else {
+				isPreowned = false;
+			}
+			Scanner aInput = new Scanner(System.in);
+			System.out.println("How old is the car?: ");
+			int age = aInput.nextInt();
+//			aInput.close();
+			Scanner tInput = new Scanner(System.in);
+			System.out.println("Please enter it's top speed: ");
+			int topSpeed = tInput.nextInt();
+//			tInput.close();
+			Scanner acInput = new Scanner(System.in);
+			System.out.println("Please enter the accceleration: ");
+			float acceleration = acInput.nextFloat();
+//			acInput.close();
+			Scanner vInput = new Scanner(System.in);
+			System.out.println("Please enter it's value: ");
+			int baseValue = vInput.nextInt();
+//			vInput.close();
+			Scanner ndInput = new Scanner(System.in);
+			System.out.println("Please enter the number of doors: ");
+			int numDoors = ndInput.nextInt();
+//			ndInput.close();
+			Scanner bInput = new Scanner(System.in);
+			System.out.println("Please enter the boot volume: ");
+			int bootSpace = bInput.nextInt();
+//			bInput.close();
+			Scanner swInput = new Scanner(System.in);
+			System.out.println("does the car have seat warmers?: ");
+			String seatwarmers = swInput.nextLine();
+//			swInput.close();
+			boolean hasSeatWarmers = false;
+			if (seatwarmers.equals("y")){
+				hasSeatWarmers = true;
+			}else {
+				hasSeatWarmers = false;
+			}
+			addToGarage(new Car(id, "car", colour, engineSize, isPreowned, age, topSpeed, acceleration,baseValue, numDoors, bootSpace, hasSeatWarmers));
+			System.out.println("car created and added");
+			readGarage();
+			
+
+			
+			
+			
+		}else {
+			System.out.println("error: only works for cars, please re-run this runner and type car");
+		}
 	}
 	
 }
